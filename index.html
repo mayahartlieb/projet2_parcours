@@ -1,0 +1,353 @@
+<!DOCTYPE html> <!--Indique au navigateur qu'il s'agit d'une page html-->
+
+<html lang="fr">    
+
+<head>
+
+<meta charset ="utf-8" /> <!--ceci indique le jeu de caratères que je vais utiliser: un jeu de caractères standard-->
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+
+<!--REMETRE TOUS LES STYLES CSS A ZERO POUR QUE LES NAVIGATEURS NE M'IMPOSENT PAS LEURS STYLES-->
+<!--J'appelle cette feuille de style AVANT ma propre feuille de style 
+<link rel="stylesheet" href="css/reset.css"> -->
+
+
+<!-- Add icon library-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+
+<!--MY CSS STYLESHEET-->
+<link rel="stylesheet" href="css/reservia.css">
+
+
+<!--The contents of a page title is very important for search engine optimization (SEO)-->
+<!--some tips for creating good titles:-->
+<!--
+    Go for a longer, descriptive title (avoid one- or two-word titles)
+    Search engines will display about 50-60 characters of the title, so try not to have titles longer than that
+    Do not use just a list of words as the title (this may reduce the page's position in search results)
+-->
+<title>Reservia, un site de reservation en ligne</title>
+
+
+
+
+<body>
+    <!--Dans le corps de ma page html, j'ai distingué 5 grandes zones, avec une largeur bien spécifique,
+         donc j'ai mis un conteneur à l'intérieure de chaque zone pour bien pouvoir centrer la page dans la fenêtre-->
+
+ 
+<!--J'ai créé 5 balises div identiques pour distinguer les 5 grandes zones de ma page -->
+<div id="header"> 
+<!--A l'intérieur de chaque grande zone 'div' je vais définir un deuxième conteneur, en commencant par la balise header-->
+<!--Je vais ensuite définir une classe 'wrapper' qui va être une classe pour les 5 zones, pour définir ce que ces zones ont en commun
+notamment la largeur et de pouvoir les centrer (en css)-->
+<header class="wrapper">
+    <div class="row">     
+                    <figure>
+                    <img src="images/logo/Reservia@3x.png" alt="logo reservia">
+                    </figure>
+                    <ul class="button-group1">
+                        <li class="button"><a href="#">Hébergements</a></li>
+                        <li class="button"><a href="#">Activités</a></li>
+                        <li class="button"><a href="#">S'inscrire</a></li>
+                    </ul>  
+                </div> <!--END OF row div -->                
+</header> <!--END OF HEADER-->
+
+</div>  <!--END OF HEADER DIV-->
+
+
+
+<div id="mainNav">
+<section class="wrapper">
+    <header>
+        <h1>Trouver votre hébergement pour des vacances de rêve</h1>
+        <p>En plein centre ville ou en pleine nature</p>
+    </header>
+    <div class="search">
+        <!--Pour créer une zone de recherche 'monoligne', 
+            on utilise : input type=search, cette zone doit avoir un nom 
+            et un placeholder, pour donner une indication sur le contenu du champ  -->
+         <form>   
+        <i class="fas fa-map-marker-alt"></i>
+        <input type="search" id="site-search" name="q" placeholder="Marseille, France"><button>
+        <i class="fas fa-search"></i></button>
+        </form>
+    </div>
+    <!--Ici bar de recherche à ajouter -->
+    <nav>
+        <ul class="button-group">
+            <li>Filtres</li>
+            <li class="button"><a href="#"><i class="fas fa-money-bill-wave"><b>Economique</b></i></a></li>
+            <li class="button"><a href="#"><i class="fas fa-child"><strong>Familial</strong></i></a></li>
+            <li class="button"><a href="#"><i class="fas fa-heart"><strong>Romantique</strong></i></a></li>
+            <li class="button"><a href="#"><i class="fas fa-dog"><strong>Animaux acceptés</strong></i></a></li>
+        </ul> 
+    </nav>
+    <footer><i class="fas fa-info-circle"></i>Plus de 500 logements sont disponibles dans cette ville</footer>
+</section>    
+</div> <!--END OF MAIN NAV DIV -->
+
+
+
+<div id="mainContent">
+
+<div class="wrapper">
+
+<section>
+<header><h1>Hébergements à Marseille</h1></header>
+<!--Ici je vais ajouter deux rangées de photos+légendes /two rows of 3 pics each -->
+<div class="mainContentImages">
+    <figure>
+        <img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="image d'une chambre de l'auberge la Cannebière" class="responsive" />
+        <!--The figcaption element has to be the first or last element of my figure,
+            we can use elements such h1 and p inside it -->
+        <figcaption>
+        <h1><strong>Auberge la Cannebière</strong></h1>
+        <p>Nuit à partir de 25€ <br> </p>
+        <div class="stars">
+                <i class="fa fa-star blue"></i>
+                <i class="fa fa-star blue"></i>
+                 <i class="fa fa-star blue"></i>
+                 <i class="fa fa-star blue"></i>
+                 <i class="fa fa-star"></i>
+        </div>
+        </figcaption>
+    </figure>
+    <figure>
+        <img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="image d'une chambre de l'hotel du port" class="responsive"/>
+        <figcaption>
+            <h1><strong>Hotel du port</strong></h1>
+            <p> Nuit à partir de 52€ <br> </p>
+        <div class="stars">
+            <i class="fa fa-star blue"></i>
+            <i class="fa fa-star blue"></i>
+            <i class="fa fa-star blue"></i>
+            <i class="fa fa-star blue"></i>
+            <i class="fa fa-star blue"></i>
+        </div>
+    </figcaption>
+    </figure>
+    <figure>
+        <img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="image d'une chambre de l'hôtel les mouettes" class="responsive" />
+        <figcaption>
+        <h1><strong>Hôtel les mouettes</strong></h1>
+        <p>Nuit à partir de 76€ <br> </p>
+        <div class="stars">
+            <i class="fa fa-star blue"></i>
+            <i class="fa fa-star blue"></i>
+            <i class="fa fa-star blue"></i>
+            <i class="fa fa-star blue"></i>
+            <i class="fa fa-star"></i>
+        </div>
+    </figcaption>
+    </figure>
+    <figure>
+        <img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="image d'une chambre de l'hôtel de la mer " class="responsive" />
+        <figcaption>
+        <h1><strong>Hôtel de la mer</strong></h1>
+        <p>Nuit à partir de 46€ <br> </p>
+        <div class="stars">
+            <i class="fa fa-star blue"></i>
+            <i class="fa fa-star blue"></i>
+            <i class="fa fa-star blue"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+    </figcaption>
+    </figure>
+    <figure>
+        <img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="image d'une chambre de l'auberge le panier" class="responsive"/>
+        <figcaption>
+            <h1><strong>Auberge Le Panier</strong></h1>
+            <p>Nuit à partir de 23€ <br> </p>
+            <div class="stars">
+            <i class="fa fa-star blue"></i>
+            <i class="fa fa-star blue"></i>
+            <i class="fa fa-star blue"></i>
+            <i class="fa fa-star blue"></i>
+            <i class="fa fa-star"></i>
+        </div></figcaption>
+    </figure>
+    <figure>
+        <img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="image d'une chambre de l'hôtel chez Amina" class="responsive"/>
+        <figcaption>
+        <h1><strong>Hôtel chez Amina</strong></h1>
+        <p>Nuit à partir de 96€ <br></p>
+        <div class="stars">
+            <i class="fa fa-star blue"></i>
+            <i class="fa fa-star blue"></i>
+            <i class="fa fa-star blue"></i>
+            <i class="fa fa-star blue"></i>
+            <i class="fa fa-star blue"></i>
+        </div></figcaption>
+    </figure>
+
+</div> <!--END OF mainContentImages div-->
+<div><a class="" href=""><h2><strong>Afficher plus</strong></h2></a></div>
+</section> <!--END OF LEFT SIDE /LEFT COLUMN-->
+
+<aside>
+    <header><h1><strong>Les plus populaires</strong></h1><i class="fas fa-chart-line"></i></header>
+    <!--A column of three images/ ici j'ajoute une colonne de 3 images -->
+    <div class="aside-container">
+        <figure>
+            <img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="image d'une chambre de l'hôtel le soleil du matin" class="responsive"/>
+            <figcaption>
+                <h1><strong>Hôtel Le soleil du matin</strong></h1>
+                <p>Nuit à partir de 128€ <br> </p>
+                <div class="stars">
+                <i class="fa fa-star blue"></i>
+                <i class="fa fa-star blue"></i>
+                <i class="fa fa-star blue"></i>
+                <i class="fa fa-star blue"></i>
+                <i class="fa fa-star blue"></i>
+            </div></figcaption>
+        </figure>
+        <figure>
+            <img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="image d'une chambre d'hôte" class="responsive" />
+            <figcaption>
+                <h1><strong>Au coeur de l'eau</strong><br>
+                    Chambres d'hôtes </h1>
+                <p>Nuit à partir de 71€ <br> </p>
+                <div class="stars">
+                <i class="fa fa-star blue"></i>
+                <i class="fa fa-star blue"></i>
+                <i class="fa fa-star blue"></i>
+                <i class="fa fa-star blue"></i>
+                <i class="fa fa-star"></i>
+            </div></figcaption>
+        </figure>
+        <figure>
+            <img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="image d'une chambre de l'hôtel Tout bleu et blanc" class="responsive"/>
+            <figcaption>
+                <h1><strong>Hôtel Tout bleu et Blanc</strong></h1>
+                <p>Nuit à partir de 68€ <br> </p>
+                <div class="stars">
+                <i class="fa fa-star blue"></i>
+                <i class="fa fa-star blue"></i>
+                <i class="fa fa-star blue"></i>
+                <i class="fa fa-star blue"></i>
+                <i class="fa fa-star"></i>
+            </div></figcaption>
+        </figure> 
+    </div>
+</aside> <!--END OF RIGHT COLUMN-->
+
+</div>
+</div> <!--END OF mainContent DIV-->
+
+
+<!--     ADDITIONAL CONTENT    -->
+<div id="additionalContent">
+<section class="wrapper">
+    <header><h1><strong>Activités à Marseille</strong></h1></header>
+    <!--4 columns of images : one image, then two , then one , and then two-->
+    <div class="">
+        <figure>
+            <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="image du Vieux Port" class="responsive" />
+            <figcaption><strong>Vieux Port</strong></figcaption>
+            
+        </figure>
+        <figure>
+            <img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="image du Fort de Pomègues" class="responsive" />
+            <figcaption><strong>Fort de Pomègues</strong></figcaption>
+            
+        </figure>
+        <figure>
+            <img src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="image des îles du Frioul" class="responsive" />
+            <figcaption><strong>îles du Frioul</strong></figcaption>
+            
+        </figure>
+        <figure>
+            <img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="image du Parc National des Calanques" class="responsive" />
+            <figcaption><strong>Parc National des Calanques</strong></figcaption>
+            
+        </figure>
+        <figure>
+            <img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="image de Notre Dame de la garde" class="responsive"/>
+            <figcaption><strong>Notre-Dame-de-la-Garde</strong></figcaption>
+            
+        </figure>
+        <figure>
+            <img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="image du Parc Longchamp" class="responsive"/>
+            <figcaption><strong>Parc Longchamp</strong></figcaption>
+            
+        </figure>
+        
+    </div>
+</section>
+</div> <!--END OF additionalContent div-->
+ 
+ 
+  
+<div id="footer">
+<footer class="wrapper">
+    <div class="row">
+            <section id="Apropos">                
+                <h1><strong>A propos</strong></h1>
+                <ul>
+                    <li>
+                        <a href="">Fonctionnement du site</a>
+
+                    </li>
+                    <li>
+                        <a href="">Conditions générales de vente</a>
+                    </li>
+                    <li>
+                        <a href="">Données et confidentialité</a>
+                    </li>
+                </ul>
+            </section> <!--END OF THE Apropos section-->
+
+
+           
+            <section id="hebergements">
+                    <h1><strong>Nos hébergements</strong></h1>
+                    <ul>
+                        <li>
+                            <a href="">Charte qualité</a>
+                        </li>
+                        <li>
+                            <a href="">Soumettre votre hotel</a>
+                        </li>
+                    </ul>
+           </section> <!--END OF THE hebergements SECTION-->
+
+
+            
+           <section id="assistance">
+
+                   <h1><strong>Assistance</strong></h1>
+                   <ul>
+                   <li>
+                       <a href="">Centre d'aide</a>
+                   </li>
+                   <li>
+                       <a href="">Nous contacter</a>
+                   </li>
+                   </ul>
+            </section>  <!--END OF THE assistance section -->     
+           
+        
+        
+        </div> <!--END OF row div-->
+</footer>
+</div> <!--END OF FOOTER DIV-->
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
