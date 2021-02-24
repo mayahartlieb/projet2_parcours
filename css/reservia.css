@@ -4,7 +4,7 @@ MA PALETTE DE COULEURS :
  le bleu claire 	#DEEBFF		rgb(222, 235, 255)
  le gris			#F2F2F2		rgb(242,242,242)
  le blanc			#ffffff		rgb(255,255,255)
- le gris foncé		#404040		rgb(64,64,64) ->couleur texte header
+ le gris foncé		#404040		rgb(64,64,64) ->couleur text header
  couleurTextemainNAv #606060 	rgb(96,96,96)
 */
 
@@ -12,9 +12,52 @@ MA PALETTE DE COULEURS :
 MA POLICE :
 RALEWAY importée depuis le site google fonts 
 */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	
+	
+}
 
+body {
+	background-color: #ffffff;
+	font-family: Raleway, Verdana, Arial, sans-serif;
+	color: #606060;
+	overflow: auto;
+
+}
+
+ul {
+	/*I want to remove all the bullet points */
+	list-style-type: none; 
+
+}
+
+a {
+	/*I want to remove my underlines*/
+	text-decoration: none;
+	/*I want to change the color of my links to have the same color as the text */
+	color: #606060;
+
+}
+
+h1 {
+	/*I want to make my titles a bit bold*/
+	color: black;
+	line-height: 1.2;
+	/*I want to have a margin for my titles on the top and bottom, I could do the same with paragraphs if I had any*/
+}
+
+h2{
+	color: black;
+}
+img {
+	/*I want my images to fit in the container*/
+	width: 100%;
+}
 
 /*Je commence tout d'abord par la version pour petit écran, comme je veux que ca reste fluide, 
 quand la taille de l'écran change, je vais définir une largeur maximum et non pas juste une largeur */
@@ -23,78 +66,70 @@ quand la taille de l'écran change, je vais définir une largeur maximum et non 
 	max-width: 768px; /*Un point d'arrêt fluide */
 	margin: 0px auto; /*Pour centrer les éléments: 
 	je vais définir une marge égale à 0 en haut et en bas et auto à droite et à gauche*/
+	overflow: auto;
 }
 
-/*Je veux avoir des images fluides/responsives*/
-img.responsive{
-	width: 100%; /*L'image aura toujours la largeur de l'élément dans lequel elle est contenue*/	
-	height: auto; /*cela évitera que la proportion entre la hauteur et la largeur des images change quand les images sont redimensionnées*/
-}
 
-body{
-	background-color: #ffffff;
-	font-family: Raleway, Verdana, Arial, sans-serif;
-	color: #606060;
-}
 
 /*buttons*/
 
-.button-group1{
-	display: flex;
-	
-}
+
 .button-group{
+
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: flex-start;
+	
 	
 }
 
+.button-group li{
+	margin-right: 2rem;
+}
+
+
 .button-group li a{
-	text-decoration: none;
+	
 	font-weight: bold!important;
+	border: 2px solid #f2f2f2;
+	border-radius: 22px;
+	margin: 10px 10px 10px 0;
+	font-weight: bold; 
+	padding-right: 5px;
+
 }
 
 .fas fa-search{
+
 	background-color:#0065fc;
 	color: #ffffff;
 	font-size: 32pt ;
 	width: 50px;
 	height: 50px;
-	display: ;
+	
 }
 
-.fas fa-map-marker-alt{
-	display: ;
-}
 
-#site-search{
-	display: ;
-}
 
 /*Les éléments de type inline-flex se mettent les uns à côté des autres sans espacements */
-.search{
-	display: inline-flex;
-	font-size: 0;
-}
 
 
+/*
 .button a{
-	background-color: ;
-	text-align: ;
-	padding-top: ;
-	border: ;
-	/*border-radius=0 pas de coins arrondis */
+	
+	/*border-radius=0 pas de coins arrondis 
 	border-radius: ;
 	color: ;
 	font-size: ;
 	width: ;
 	height: ;
 	display: ;
-}
+}*/
 
 .button a:hover{
+
 	background-color: #DEEBFF ;
+	
 }
 
 /*Après avoir crée en premier la page html, importé les icones, les fonts et défini les couleurs, je vais maintenant 
@@ -102,60 +137,106 @@ définir cinq selecteurs pour mes cinq zones*/
 
 /*header*/
 #header{
+
 	background-color: #ffffff;
-	padding: 0px 20px; /* J'ai choisi de mettre un padding comme ca la couleur passera de travers, ici on a 20px à doite et à gauche */
-	height: 144px;
-	padding-top: 32px ;
-	border: 1px solid black;
+	padding: 0px 0px; /*On a 0 en haut et en bas et 20 a droite et a gauche */
+	height: 120px;
+	padding-top: 0px;
+	margin-top: 0px;
+	
+	max-height: 108px;
 	
 }
 
-#header div.row{
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
+#header ul li:last-child a{
+	color:#0065fc;
+	font-weight: bold!important;
 }
 
 
-/*Sur un petit écran : Mon élément figure, donc le logo, après avoir affiché la grille de photoshop, occupe 6 grilles,
+/*Sur un petit écran : le logo, après avoir affiché la grille de photoshop, occupe 6 grilles,
  ce qui correspond à 48.78% selon le site gridinator.com*/
-#header figure img{
-	width: 48.78%;
+#header img{
+
+	max-width: 32.39%;
 }
 
+#header ul{
+	display: flex;
+	margin-top: auto;
+	
+}
 
 #header ul li{
-	font-family: Raleway, Verdana, sans-serif;
-	font-size: 15pts;
-	margin: 20px;
+	display: flex;
+	font-family: Raleway, Verdana, sans-serif;	
+	margin-right: 2rem;
 	
-
 }
 
 #header ul li a{
-	text-decoration: none;
+	display: flex;
 	font-family: Raleway, Verdana, sans-serif;
-	font-size: 15pts;
+	padding-top: 30px;
 	color: #404040;
+	
 }
 
-#header ul li a:focus{
-	border-top: solid 5px #609ffd;
-	color: #609ffd;
-
-}
+#header ul li a:focus {
+		border-bottom: solid 3px #609ffd;
+		padding: 15px;
+		color: #0065FC;
+	}
 
 /*mainNav*/
 #mainNav{
 	background-color: #ffffff;
-	padding: 0px 20px;
+	padding-bottom:2rem; /* top, right, bottom, left */
+	border: 2px solid black;
+	height: 278px;
 }
 
 #mainNav header{
 	font-weight: bold;
+	border: 2px solid red;
+	padding-bottom: 1rem;
 }
 
+#mainNav header h1{
+	color: black;
+	font-weight: bold;
+}
 
+#mainNav div.search{
+	border: 2px solid green;
+	padding-bottom: 1.5rem;
+	padding-top:1rem;
+	
+}
+
+#mainNav nav{
+	border: 2px solid blue;
+	padding-bottom: 3rem;
+	padding-top: 2rem;
+}
+
+#mainNav ul li a{
+	padding:1rem;
+	margin-left:1.5rem;
+}
+
+#mainNav ul li i{
+	color:#0065fc;
+}
+
+#mainNav form i{
+	color: #0065fc;
+	border-radius: 22px;
+	border: 2px solid #f2f2f2;
+    margin: 10px 10px 10px 0;
+    font-weight: bold;
+    padding-right: 5px;
+}
 
 /*mainContent*/
 
@@ -164,26 +245,49 @@ définir cinq selecteurs pour mes cinq zones*/
 	background-color: #f2f2f2 ;
 	/*padding: la marge intérieure vs margin: la marge extérieure*/
 	padding: 0px 20px;
+	border-radius: 22px;
 	
+	
+}
 
+#mainContent {
+	margin-top: 54px;
+	/*
+	margin-bottom: 72px;
+	max-height: 620px;
+	*/
 }
 
 .aside figcaption{
 	background-color: #ffffff;
 	/*avec le rgba je définis une opacité à mon titre*/
 	background-color: rgba(255,255,255,0.80);
+	/*
 	padding: ;
 	color: ;
+		*/
 	font-family: Raleway, Verdana, sans-serif;
+	/*
 	font-size: 32pt;
+		*/
+
 
 }
+
+
+
 
 #mainContent section{
 	background-color: #ffffff;
 	padding: 0px 20px;
-	display: flex;
+	border-radius: 22px;
+	/*
+	display: ;
+		*/
 }
+
+
+/*Additional content*/
 
 #additionalContent{
 	background-color: #ffffff;
@@ -191,14 +295,17 @@ définir cinq selecteurs pour mes cinq zones*/
 	
 }
 
+
+
+
 #footer{
 	background-color: #f2f2f2;
 	padding: 20px 20px;
+	
 }
 
-.Apropos ul li{
-	text-decoration: none;
-}
+
+
 
 
 
@@ -224,19 +331,114 @@ les unes à côté des autres sans espacements. */
 
 
 @media (min-width: 1024px){
+
+	body{
+		margin: 0 4%;
+	}
+
+
+	#header ul{
+		display: flex;
+		justify-content: flex-end;
+		align-items: baseline;
+	}
+
+	#header ul li a:focus {
+		border-bottom: none;
+		border-top: solid 2px #609ffd;
+		color: #609ffd;
+		margin-top: 0%;
+	}
+
+	#header ul li:first-child{
+		margin-right: auto;
+		margin-left: 1rem;
+	}
+
+	#header img{
+		max-width: 23%;
+	}
+	
+
+	#header {
+		height: 144px;
+	}
+
 	.wrapper{
 		max-width: 1024px;
 	}
 
-	#footer div.row{
+	#mainContent div.row {
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 	}
+
+	#mainContent section{
+		background-color: #F2F2F2;
+		border-radius: 22px;
+	}
+
+	#footer div.row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 180px;
+	}
+
+	
 }
 	
 @media (min-width: 1480px){
+
+	#header ul li a:focus {
+		border-bottom: none;
+		border-top: solid 2px #609ffd;
+		color: #609ffd;
+		margin-top: 0%;
+	}
+
+	#header ul{
+		display: flex;
+		justify-content: flex-end;
+		align-items: baseline;
+	}
+
+	#header ul li:first-child{
+		margin-right: auto;
+		margin-left: 1rem;
+	}
+
+	#header {
+		height: 100px;
+	}
+
+	#header img{
+		max-width: 23%;
+	}
+
 	.wrapper{
 		max-width: 1480px;
 	}
-	
+
+	body {
+		height: 1890px;
+		margin: 0 3.3%;
+	}
+
+	#mainContent div.row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#mainContent section {
+		background-color: #F2F2F2;
+		border-radius: 22px;
+	}
+
+	#footer div.row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 180px;
+	}
 }
