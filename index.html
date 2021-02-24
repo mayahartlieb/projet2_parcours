@@ -1,4 +1,4 @@
-<!DOCTYPE html> <!--Indique au navigateur qu'il s'agit d'une page html-->
+﻿<!DOCTYPE html> <!--Indique au navigateur qu'il s'agit d'une page html-->
 
 <html lang="fr">    
 
@@ -14,7 +14,8 @@
 
 
 <!-- Add icon library-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
 
 
 <!--MY CSS STYLESHEET-->
@@ -31,7 +32,7 @@
 <title>Reservia, un site de reservation en ligne</title>
 
 
-
+    </head>
 
 <body>
     <!--Dans le corps de ma page html, j'ai distingué 5 grandes zones, avec une largeur bien spécifique,
@@ -44,16 +45,18 @@
 <!--Je vais ensuite définir une classe 'wrapper' qui va être une classe pour les 5 zones, pour définir ce que ces zones ont en commun
 notamment la largeur et de pouvoir les centrer (en css)-->
 <header class="wrapper">
-    <div class="row">     
+    <div class="container flex">     
                     <figure>
                     <img src="images/logo/Reservia@3x.png" alt="logo reservia">
                     </figure>
+                    <nav>
                     <ul class="button-group1">
-                        <li class="button"><a href="#">Hébergements</a></li>
-                        <li class="button"><a href="#">Activités</a></li>
-                        <li class="button"><a href="#">S'inscrire</a></li>
+                        <li class="button"><a href="#hebergements">Hébergements</a></li>
+                        <li class="button"><a href="#additionalContent">Activités</a></li>
+                        <li class="button"><a href="#"><b>S'inscrire</b></a></li>
                     </ul>  
-                </div> <!--END OF row div -->                
+                    </nav>
+    </div> <!--END OF row div -->                
 </header> <!--END OF HEADER-->
 
 </div>  <!--END OF HEADER DIV-->
@@ -62,6 +65,7 @@ notamment la largeur et de pouvoir les centrer (en css)-->
 
 <div id="mainNav">
 <section class="wrapper">
+    <div class="row">
     <header>
         <h1>Trouver votre hébergement pour des vacances de rêve</h1>
         <p>En plein centre ville ou en pleine nature</p>
@@ -75,11 +79,13 @@ notamment la largeur et de pouvoir les centrer (en css)-->
         <input type="search" id="site-search" name="q" placeholder="Marseille, France"><button>
         <i class="fas fa-search"></i></button>
         </form>
-    </div>
+    </div>    <!--END OF SEARCH DIV-->
+    </div>   <!--END OF ROW CLASS-->
     <!--Ici bar de recherche à ajouter -->
+    <div class="row">
     <nav>
         <ul class="button-group">
-            <li>Filtres</li>
+            <li><b>Filtres</b></li>
             <li class="button"><a href="#"><i class="fas fa-money-bill-wave"><b>Economique</b></i></a></li>
             <li class="button"><a href="#"><i class="fas fa-child"><strong>Familial</strong></i></a></li>
             <li class="button"><a href="#"><i class="fas fa-heart"><strong>Romantique</strong></i></a></li>
@@ -87,7 +93,9 @@ notamment la largeur et de pouvoir les centrer (en css)-->
         </ul> 
     </nav>
     <footer><i class="fas fa-info-circle"></i>Plus de 500 logements sont disponibles dans cette ville</footer>
-</section>    
+    </div>   <!--END OF 2nd class row-->
+
+</section>    <!--END OF WRAPPER SECTION-->
 </div> <!--END OF MAIN NAV DIV -->
 
 
@@ -95,8 +103,8 @@ notamment la largeur et de pouvoir les centrer (en css)-->
 <div id="mainContent">
 
 <div class="wrapper">
-
-<section>
+<div class="row">
+<section id="hebergements">
 <header><h1>Hébergements à Marseille</h1></header>
 <!--Ici je vais ajouter deux rangées de photos+légendes /two rows of 3 pics each -->
 <div class="mainContentImages">
@@ -235,7 +243,7 @@ notamment la largeur et de pouvoir les centrer (en css)-->
         </figure> 
     </div>
 </aside> <!--END OF RIGHT COLUMN-->
-
+</div> <!--END OF ROW div-->
 </div>
 </div> <!--END OF mainContent DIV-->
 
@@ -245,7 +253,7 @@ notamment la largeur et de pouvoir les centrer (en css)-->
 <section class="wrapper">
     <header><h1><strong>Activités à Marseille</strong></h1></header>
     <!--4 columns of images : one image, then two , then one , and then two-->
-    <div class="">
+    <div class="row">
         <figure>
             <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="image du Vieux Port" class="responsive" />
             <figcaption><strong>Vieux Port</strong></figcaption>
